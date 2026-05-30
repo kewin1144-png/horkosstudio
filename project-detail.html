@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read deep design breakdowns and visual analyses of selected flagship branding, UI/UX, and motion graphics projects crafted by Horkos Studio.">
+  <title>Case Study Details — Horkos Studio | Premium Creative Works & Design Breakdown</title>
+  
+  <!-- Premium Google Fonts (Outfit & Space Grotesk) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#0D4C8C',
+            brandBlack: '#111011',
+            brandWhite: '#F8FFFF',
+          },
+          fontFamily: {
+            outfit: ['Outfit', 'sans-serif'],
+            space: ['Space Grotesk', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Premium Stylesheet -->
+  <link rel="icon" type="image/svg+xml" href="images/fav-icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brandWhite text-brandBlack font-outfit overflow-x-hidden relative selection:bg-brandBlue selection:text-brandWhite">
+
+
+  <!-- CUSTOM LERP CURSOR -->
+  <div id="custom-cursor" class="pointer-events-none fixed z-[999] mix-blend-difference hidden md:block">
+    <div class="w-3 h-3 bg-brandWhite rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+  </div>
+  <div id="custom-cursor-glow" class="pointer-events-none fixed z-[998] hidden md:block">
+    <div class="w-12 h-12 border border-brandBlue/55 rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out bg-brandBlue/5 blur-[2px]"></div>
+  </div>
+
+  <!-- INTERACTIVE CANVAS BACKGROUND -->
+  <canvas id="background-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-20"></canvas>
+
+  <!-- BACKGROUND RADIAL ORBS -->
+  <div class="fixed top-[-20%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-radial-glow opacity-10 pointer-events-none z-0 animate-pulse-slow"></div>
+  <div class="fixed bottom-[-20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-radial-glow opacity-5 pointer-events-none z-0 animate-pulse-slow" style="animation-delay: -5s;"></div>
+
+
+
+  <!-- FLOATING START PROJECT — RIGHT BOTTOM LIQUID GLASS -->
+  <div class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] pointer-events-none">
+    <a href="index.html#contact" class="pointer-events-auto liquid-glass-btn group flex h-12 items-center gap-3 rounded-full px-6 backdrop-blur-xl transition-all duration-350 hover:scale-[1.05]">
+      Start Project
+      <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
+    </a>
+  </div>
+
+  <!-- FIXED HEADER BACKING WITH MOVING LUXURY GRADIENT -->
+  <div id="header-backing" class="fixed top-0 left-0 w-full h-[80px] md:h-[96px] bg-gradient-to-r from-[#050507] via-[#121216] to-[#050507] z-45 overflow-hidden border-b border-white/[0.05] shadow-2xl pointer-events-none transition-opacity duration-700 ease-in-out">
+    <!-- Inner Dark Vertical Gradient Overlay for Deep texture -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 opacity-85 z-0"></div>
+    <!-- Fluid Glowing Color Trails -->
+    <div class="absolute top-[-50%] left-[-15%] w-[45vw] h-[180%] rounded-full bg-[radial-gradient(circle,rgba(13,76,140,0.32)_0%,transparent_75%)] blur-[40px] animate-header-glow-1 z-1"></div>
+    <div class="absolute bottom-[-50%] right-[-15%] w-[35vw] h-[180%] rounded-full bg-[radial-gradient(circle,rgba(13,76,140,0.22)_0%,transparent_75%)] blur-[30px] animate-header-glow-2 z-1"></div>
+  </div>
+
+  <!-- FIXED UNIFIED HEADER (MORPH GLASS TAB) -->
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 p-4 md:p-[1.5vw] pointer-events-none flex justify-center">
+    
+    <div class="morph-glass-tab pointer-events-auto flex items-center justify-between w-full max-w-7xl px-5 py-3 md:py-3.5 rounded-full">
+      
+      <!-- Left Edge: Horkos Brand Logo -->
+      <a href="index.html" class="flex items-center hover-magnetic select-none transition-transform duration-300 active:scale-95">
+        <img src="images/logo.png" alt="Horkos Logo" class="h-6 md:h-7 w-auto object-contain">
+      </a>
+
+      <!-- Middle: Elegant Navigation Links (Desktop Only) -->
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="work.html" class="nav-link">Work</a>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="learning.html" class="nav-link">Learning</a>
+      </nav>
+
+      <!-- Right Edge: Combined Line Icons & Menu Button -->
+      <div class="flex items-center gap-3">
+        <!-- Mail Line Icon (Contact coordinates) -->
+        <a href="mailto:horkosstudio@gmail.com" aria-label="Mail us" class="icon-action-btn hover-magnetic">
+          <i class="fa-regular fa-envelope text-sm"></i>
+        </a>
+        
+        <!-- WhatsApp Line Icon (Direct synchronization) -->
+        <a href="https://wa.me/919100719931?text=Hello%20Horkos%20Studio%2C%20I'm%20interested%20in%20discussing%20a%20new%20creative%20project%20with%20you!" target="_blank" aria-label="WhatsApp us" class="icon-action-btn hover-magnetic">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+        </a>
+        
+        <!-- Hamburger Menu Button (Premium Custom Lines) -->
+        <button id="mobile-menu-btn" aria-label="Toggle menu" class="icon-action-btn hover-magnetic relative focus:outline-none flex flex-col items-center justify-center gap-1.5 p-2">
+          <span class="w-5 h-[1.5px] bg-brandBlack rounded-full transition-all duration-300 menu-line-1"></span>
+          <span class="w-5 h-[1.5px] bg-brandBlack rounded-full transition-all duration-300 menu-line-2"></span>
+          <span class="w-5 h-[1.5px] bg-brandBlack rounded-full transition-all duration-300 menu-line-3"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- FULLSCREEN OVERLAY DRAWER MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-[#F8FFFF] z-40 translate-y-[-100%] transition-transform duration-[800ms] ease-in-out flex flex-col justify-between p-8 md:p-[5vw] pt-32 font-outfit">
+    
+    <div class="flex flex-col gap-6 text-4xl md:text-7xl uppercase font-extralight tracking-widest max-w-4xl text-brandBlack">
+      <a href="index.html" class="mobile-nav-link text-brandBlack/45 hover:text-brandBlack transition-colors">/ Home</a>
+      <a href="services.html" class="mobile-nav-link text-brandBlack/45 hover:text-brandBlack transition-colors">/ Services</a>
+      <a href="work.html" class="mobile-nav-link text-brandBlack/45 hover:text-brandBlack transition-colors">/ Work</a>
+
+      <a href="about.html" class="mobile-nav-link text-brandBlack/45 hover:text-brandBlack transition-colors">/ About</a>
+      <a href="learning.html" class="mobile-nav-link text-brandBlack/45 hover:text-brandBlack transition-colors">/ Learning</a>
+    </div>
+    
+    <div class="border-t border-brandBlack/10 pt-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 font-space text-brandBlack animate-fade-in">
+      <div class="flex flex-col">
+        <span class="text-xs text-brandBlack/30 uppercase tracking-widest mb-1">Direct Synchronization</span>
+        <a href="mailto:horkosstudio@gmail.com" class="text-sm text-brandBlack hover:text-brandBlue transition-all">horkosstudio@gmail.com</a>
+      </div>
+      <div class="flex justify-between items-center text-xs tracking-widest text-brandBlack/40 uppercase gap-8">
+        <span>© 2026 Horkos Studio</span>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-brandBlack">Instagram</a>
+          <a href="#" class="hover:text-brandBlack">Behance</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN SCROLL WRAPPER (STICKY-SPLIT PORTFOLIO DESIGN) -->
+  <main class="relative z-10 w-full pt-32 md:pt-40 pb-24 text-brandBlack bg-brandWhite min-h-[90vh]">
+    <section class="max-w-7xl mx-auto px-6 md:px-[5vw] w-full">
+      
+      <!-- Back Link -->
+      <div class="mb-12">
+        <a href="work.html" class="font-space text-[10px] uppercase font-bold tracking-widest inline-flex items-center gap-2 text-brandBlack/60 hover:text-brandBlue transition-colors px-4 py-2 rounded-full border border-brandBlack/10 bg-brandWhite/45 backdrop-blur-md">
+          <i class="fa-solid fa-arrow-left"></i> [Back to Selected Works]
+        </a>
+      </div>
+
+      <!-- Sticky Split Columns -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative">
+        
+        <!-- Left Column: Sticky Specifications & Brand Info (5 cols) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-32 flex flex-col gap-8">
+          
+          <!-- Category & Heading -->
+          <div>
+            <span class="font-space text-xs text-brandBlue uppercase tracking-[0.2em] font-bold block mb-2" id="project-detail-category">-</span>
+            <h1 class="font-outfit text-3xl sm:text-5xl font-black uppercase tracking-widest text-brandBlack leading-none" id="project-detail-title">-</h1>
+          </div>
+
+          <!-- Specs panel -->
+          <div class="bg-brandBlue/5 border border-brandBlue/10 rounded-2xl p-6 flex flex-col gap-4 font-outfit shadow-sm">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <span class="font-space text-[9px] text-brandBlack/45 uppercase tracking-widest block mb-0.5">Client</span>
+                <span class="font-outfit text-sm font-semibold text-brandBlack" id="project-detail-client">-</span>
+              </div>
+              <div>
+                <span class="font-space text-[9px] text-brandBlack/45 uppercase tracking-widest block mb-0.5">Year</span>
+                <span class="font-outfit text-sm font-semibold text-brandBlack" id="project-detail-year">-</span>
+              </div>
+              <div class="col-span-2 border-t border-brandBlack/5 pt-3">
+                <span class="font-space text-[9px] text-brandBlack/45 uppercase tracking-widest block mb-0.5">Curation</span>
+                <span class="font-outfit text-sm font-semibold text-brandBlue" id="project-detail-score">-</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description Text blocks -->
+          <div class="font-outfit text-sm md:text-base font-light text-brandBlack/70 leading-relaxed flex flex-col gap-4">
+            <p id="project-detail-desc-1">-</p>
+            <p id="project-detail-desc-2">-</p>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Vertically Stacked High-Definition Mockups (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-8" id="project-detail-gallery">
+          <!-- Stacked case study images will be loaded by Javascript -->
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- 7. FOOTER SECTION -->
+  <!-- 7. FOOTER SECTION -->
+  <footer class="bg-brandBlack border-t border-white/10 py-8 px-6 md:px-[5vw] relative z-10 text-white/55 font-outfit">
+    <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left side: Horkos Logo + Copyright -->
+      <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left select-none">
+        <div class="flex items-center gap-2">
+          <img src="images/fav-icon.svg" alt="Horkos Favicon" class="h-6 w-auto object-contain animate-spin-slow">
+          <img src="images/logo-name.svg" alt="Horkos Studio" class="h-6 w-auto object-contain brightness-0 invert">
+        </div>
+        <span class="font-space text-[10px] uppercase tracking-widest text-white/40">© 2026 Horkos Studio. All rights reserved.</span>
+      </div>
+
+      <!-- Center-Right: Navigation & Social compact links -->
+      <div class="flex flex-wrap items-center justify-center gap-6 font-space text-[10px] uppercase font-bold tracking-widest text-white/50">
+        <a href="index.html" class="hover:text-brandBlue transition-colors">Home</a>
+        <a href="services.html" class="hover:text-brandBlue transition-colors">Services</a>
+        <a href="work.html" class="hover:text-brandBlue transition-colors">Work</a>
+        <a href="about.html" class="hover:text-brandBlue transition-colors">About</a>
+        <a href="learning.html" class="hover:text-brandBlue transition-colors">Learning</a>
+        <span class="text-white/20 hidden sm:inline">|</span>
+        <a href="#" class="hover:text-brandBlue transition-colors">Instagram</a>
+        <a href="#" class="hover:text-brandBlue transition-colors">Behance</a>
+        <span class="text-white/20 hidden sm:inline">|</span>
+        <a href="#" class="font-semibold text-brandWhite hover:text-brandBlue transition-colors">Return to Top <i class="fa-solid fa-arrow-up ml-0.5 text-[8px]"></i></a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- GSAP Core & Plugins CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Interactive Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
