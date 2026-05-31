@@ -156,7 +156,7 @@
         <i class="fa-solid fa-arrow-left"></i> [Back to Learning Portal]
       </a>
 
-      <div class="mb-16 border-b border-brandBlack/5 pb-8">
+                  <div class="mb-16 border-b border-brandBlack/5 pb-8">
         <span class="font-space text-xs md:text-[0.9vw] text-brandBlue uppercase tracking-[0.2em] font-bold flex items-center gap-2 mb-2">
           <span class="w-1.5 h-1.5 rounded-full bg-brandBlue"></span> Prompt Archive
         </span>
@@ -164,46 +164,337 @@
           PROMPT ENGINEERING
         </h1>
         <p class="font-outfit text-sm md:text-base font-light text-brandBlack/60 leading-relaxed max-w-2xl">
-          Click any monospaced prompt card below to copy its raw visual coordinates to your clipboard instantly.
+          Explore a curated list of AI prompts to generate high-end visuals and creative inspiration.
         </p>
       </div>
 
-      <!-- Prompts Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12" id="prompts-grid">
-        
-        <!-- Prompt 1 -->
-        <div class="prompt-card p-6 flex flex-col gap-6" data-tilt>
-          <div class="w-full h-48 rounded-xl overflow-hidden relative border border-brandBlack/5">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80');"></div>
-          </div>
-          <div class="flex flex-col gap-4 text-left">
-            <h3 class="font-outfit text-lg font-bold uppercase text-brandBlack">01 // Minimalist Aesthetic Poster</h3>
-            <div class="prompt-code-container relative group">
-              <span class="prompt-copy-badge">Copy Code</span>
-              <code class="font-space text-xs text-brandBlack/80 block break-words whitespace-pre-wrap">/imagine prompt: Minimalist spatial digital poster, Swiss layout, black sans-serif typography, large organic fluid cyan vector shapes, deep luxury light white background, architectural grids, premium noise texture, 8k resolution --ar 16:9 --style raw</code>
+      <!-- Pinterest Style Masonry Grid for 20 Prompts -->
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-6">
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Cinematic Web Layout" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">01 // CINEMATIC WEB LAYOUT</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design a cinematic, dark-mode web layout for a luxury creative agency using deep charcoal backgrounds and neon blue accents.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-1-text">Design a cinematic, dark-mode web layout for a luxury creative agency using deep charcoal backgrounds and neon blue accents.</code>
+                <button onclick="copyToClipboard('prompt-1-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Prompt 2 -->
-        <div class="prompt-card p-6 flex flex-col gap-6" data-tilt>
-          <div class="w-full h-48 rounded-xl overflow-hidden relative border border-brandBlack/5">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=600&q=80');"></div>
-          </div>
-          <div class="flex flex-col gap-4 text-left">
-            <h3 class="font-outfit text-lg font-bold uppercase text-brandBlack">02 // 3D Procedural Mesh Shaders</h3>
-            <div class="prompt-code-container relative group">
-              <span class="prompt-copy-badge">Copy Code</span>
-              <code class="font-space text-xs text-brandBlack/80 block break-words whitespace-pre-wrap">/imagine prompt: 3D wavy cybernetic mesh structure, projected intersection lines, soft glowing blue node dots, frosted glass refraction layers, light studio backdrop with cinematic blur, ambient light streaks, extreme visual depth, Octane render --ar 16:9 --style raw --v 6.0</code>
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=600&q=80" alt="Minimalist Logo" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">02 // MINIMALIST LOGO</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Create a minimalist logo for a tech startup using geometric shapes and a monochromatic palette.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-2-text">Create a minimalist logo for a tech startup using geometric shapes and a monochromatic palette.</code>
+                <button onclick="copyToClipboard('prompt-2-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=600&q=80" alt="3D Motion Graphic" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">03 // 3D MOTION GRAPHIC</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Render a 3D glassmorphic abstract shape rotating slowly with a colorful gradient lighting setup.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-3-text">Render a 3D glassmorphic abstract shape rotating slowly with a colorful gradient lighting setup.</code>
+                <button onclick="copyToClipboard('prompt-3-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80" alt="Responsive UI Kit" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">04 // RESPONSIVE UI KIT</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design a responsive UI kit with modern cards, soft shadows, and clean sans-serif typography.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-4-text">Design a responsive UI kit with modern cards, soft shadows, and clean sans-serif typography.</code>
+                <button onclick="copyToClipboard('prompt-4-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Product Showcase" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">05 // PRODUCT SHOWCASE</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">A high-end product landing page layout featuring a 3D rendered bottle with floating ingredients.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-5-text">A high-end product landing page layout featuring a 3D rendered bottle with floating ingredients.</code>
+                <button onclick="copyToClipboard('prompt-5-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80" alt="Cyberpunk Aesthetic" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">06 // CYBERPUNK AESTHETIC</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Create a cyberpunk themed dashboard UI with glowing neon pink and cyan metrics.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-6-text">Create a cyberpunk themed dashboard UI with glowing neon pink and cyan metrics.</code>
+                <button onclick="copyToClipboard('prompt-6-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=600&q=80" alt="Editorial Look" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">07 // EDITORIAL LOOK</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design an editorial style fashion blog layout featuring overlapping images and elegant serif typography.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-7-text">Design an editorial style fashion blog layout featuring overlapping images and elegant serif typography.</code>
+                <button onclick="copyToClipboard('prompt-7-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1614624532983-4ce03382d63d?auto=format&fit=crop&w=600&q=80" alt="Web3 Dashboard" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">08 // WEB3 DASHBOARD</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">A Web3 crypto wallet dashboard with dark glassmorphism effects and colorful gradient charts.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-8-text">A Web3 crypto wallet dashboard with dark glassmorphism effects and colorful gradient charts.</code>
+                <button onclick="copyToClipboard('prompt-8-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80" alt="Branding Strategy" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">09 // BRANDING STRATEGY</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Develop a brand identity for an organic coffee shop focusing on earth tones and organic shapes.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-9-text">Develop a brand identity for an organic coffee shop focusing on earth tones and organic shapes.</code>
+                <button onclick="copyToClipboard('prompt-9-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Futuristic UI" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">10 // FUTURISTIC UI</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design a futuristic HUD interface with complex data visualizations and holographic blue elements.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-10-text">Design a futuristic HUD interface with complex data visualizations and holographic blue elements.</code>
+                <button onclick="copyToClipboard('prompt-10-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Abstract Art" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">11 // ABSTRACT ART</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Generate an abstract fluid art background with swirling blue and white gradients.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-11-text">Generate an abstract fluid art background with swirling blue and white gradients.</code>
+                <button onclick="copyToClipboard('prompt-11-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80" alt="E-commerce Grid" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">12 // E-COMMERCE GRID</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Create a clean, minimalist e-commerce product grid for a high-end fashion brand.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-12-text">Create a clean, minimalist e-commerce product grid for a high-end fashion brand.</code>
+                <button onclick="copyToClipboard('prompt-12-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80" alt="Typography Poster" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">13 // TYPOGRAPHY POSTER</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design a typography-heavy poster using bold, sans-serif fonts in a Swiss design style.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-13-text">Design a typography-heavy poster using bold, sans-serif fonts in a Swiss design style.</code>
+                <button onclick="copyToClipboard('prompt-13-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845?auto=format&fit=crop&w=600&q=80" alt="Dark Mode App" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">14 // DARK MODE APP</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design a sleek dark mode mobile app interface for a premium fitness tracker.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-14-text">Design a sleek dark mode mobile app interface for a premium fitness tracker.</code>
+                <button onclick="copyToClipboard('prompt-14-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1618172193763-c511deb635ca?auto=format&fit=crop&w=600&q=80" alt="Vaporwave Visual" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">15 // VAPORWAVE VISUAL</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Generate a vaporwave style visual with neon grids, classical statues, and retro sunset elements.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-15-text">Generate a vaporwave style visual with neon grids, classical statues, and retro sunset elements.</code>
+                <button onclick="copyToClipboard('prompt-15-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=600&q=80" alt="Organic Skincare" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">16 // ORGANIC SKINCARE</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Create a packaging design for an organic skincare brand using pastel colors and minimalist typography.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-16-text">Create a packaging design for an organic skincare brand using pastel colors and minimalist typography.</code>
+                <button onclick="copyToClipboard('prompt-16-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=600&q=80" alt="Neon Signage" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">17 // NEON SIGNAGE</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design a custom neon sign concept for a modern arcade bar in vibrant pink and purple.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-17-text">Design a custom neon sign concept for a modern arcade bar in vibrant pink and purple.</code>
+                <button onclick="copyToClipboard('prompt-17-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80" alt="Glassmorphism UI" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">18 // GLASSMORPHISM UI</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">A banking app interface utilizing heavy glassmorphism, bright colorful spheres, and clean white text.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-18-text">A banking app interface utilizing heavy glassmorphism, bright colorful spheres, and clean white text.</code>
+                <button onclick="copyToClipboard('prompt-18-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Architectural Web" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">19 // ARCHITECTURAL WEB</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">A website layout for an architecture firm focusing on large high-contrast photography and generous white space.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-19-text">A website layout for an architecture firm focusing on large high-contrast photography and generous white space.</code>
+                <button onclick="copyToClipboard('prompt-19-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid relative overflow-hidden rounded-2xl bg-brandWhite border border-brandBlack/5 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col mb-6">
+            <div class="w-full relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1614729939124-03290b56c9ce?auto=format&fit=crop&w=600&q=80" alt="Metaverse Experience" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <h4 class="font-outfit text-base font-bold uppercase text-brandBlack">20 // METAVERSE EXPERIENCE</h4>
+              <p class="font-outfit text-xs font-light text-brandBlack/60 leading-relaxed">Design a landing page for a metaverse virtual reality experience featuring 3D immersive backgrounds.</p>
+              <div class="mt-2">
+                <code class="hidden" id="prompt-20-text">Design a landing page for a metaverse virtual reality experience featuring 3D immersive backgrounds.</code>
+                <button onclick="copyToClipboard('prompt-20-text', this)" class="w-full flex items-center justify-center gap-2 bg-brandBlack/5 text-brandBlack font-space text-[10px] uppercase font-bold tracking-widest py-3 rounded-xl hover:bg-brandBlack hover:text-brandWhite transition-colors active:scale-95 duration-200">
+                  <i class="fa-regular fa-copy"></i> Copy Prompt
+                </button>
+              </div>
+            </div>
+          </div>
       </div>
+
     </section>
   </main>
 
-  <!-- 7. FOOTER SECTION -->
   <!-- 7. FOOTER SECTION -->
   <footer class="bg-brandBlack border-t border-white/10 py-8 px-6 md:px-[5vw] relative z-10 text-white/55 font-outfit">
     <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-6">
@@ -211,7 +502,7 @@
       <!-- Left side: Horkos Logo + Copyright -->
       <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left select-none">
         <div class="flex items-center gap-2">
-          <img src="images/fav-icon.svg" alt="Horkos Favicon" class="h-6 w-auto object-contain animate-spin-slow">
+          <img src="images/footer logo icon.svg" alt="Horkos Favicon" class="h-6 w-auto object-contain animate-[spin_3s_linear_infinite]">
           <img src="images/logo-name.svg" alt="Horkos Studio" class="h-6 w-auto object-contain brightness-0 invert">
         </div>
         <span class="font-space text-[10px] uppercase tracking-widest text-white/40">© 2026 Horkos Studio. All rights reserved.</span>

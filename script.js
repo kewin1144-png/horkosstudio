@@ -1167,3 +1167,50 @@ window.addEventListener('pageshow', (event) => {
     window.location.reload();
   }
 });
+
+// Clipboard functionality for Prompts & Design Spec pages
+window.copyToClipboard = function(elementId, btnElement) {
+  const codeEl = document.getElementById(elementId);
+  if (!codeEl) return;
+  const text = codeEl.textContent || codeEl.innerText;
+  
+  navigator.clipboard.writeText(text).then(() => {
+    const originalText = btnElement.innerHTML;
+    btnElement.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+    btnElement.classList.add('bg-brandBlue', 'text-brandWhite');
+    
+    setTimeout(() => {
+      btnElement.innerHTML = originalText;
+      btnElement.classList.remove('bg-brandBlue', 'text-brandWhite');
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
+};
+
+
+// Floating Button Footer Collision Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const floatingBtn = document.getElementById('floating-start-btn');
+  const footer = document.querySelector('footer');
+  if (floatingBtn && footer) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          floatingBtn.classList.add('translate-y-24', 'opacity-0');
+          floatingBtn.firstElementChild.classList.remove('pointer-events-auto');
+          floatingBtn.firstElementChild.classList.add('pointer-events-none');
+        } else {
+          floatingBtn.classList.remove('translate-y-24', 'opacity-0');
+          floatingBtn.firstElementChild.classList.remove('pointer-events-none');
+          floatingBtn.firstElementChild.classList.add('pointer-events-auto');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0,
+      rootMargin: '50px'
+    });
+    observer.observe(footer);
+  }
+});
